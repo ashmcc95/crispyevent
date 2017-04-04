@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  time: 2017-03-19 20:26:51
+  location: MyString
+  address: MyText
+  closed: false
+  description: MyText
+
+two:
+  name: MyString
+  time: 2017-03-19 20:26:51
+  location: MyString
+  address: MyText
+  closed: false
+  description: MyText

@@ -1,0 +1,78 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  margin: auto;
+}
+
+h1{
+  color: #95989A;
+}
+
+label{
+  font-size: 17px;
+  color: #95989A;
+  padding-bottom: 5px;
+}
+
+.labelc{
+  font-size: 15px;
+  margin-left: -25px;
+}
+
+
+.name{
+
+padding-bottom: 5px;
+padding-top: 20px;
+  }
+
+.eventname{
+  width: 76%;
+  height: 30px;
+  font-size: 20px;
+  padding: 5px;
+  padding-top: 10px;
+  border: 1px solid #95989A;
+
+}
+
+.friendfield{
+  width: 36%;
+  height: 30px;
+  font-size: 20px;
+  padding: 5px;
+  padding-top: 10px;
+  border: 1px solid #95989A;
+
+}
+
+.border{
+  padding: 3px;
+}
+
+.container{
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.containertwo{
+  width:21%;
+  overflow: auto;
+  padding-bottom: 30px;
+}
+
+.left{
+  width: 50%;
+  float: left;
+}
+
+.right{
+  width: 50%;
+  float: left;
+}
+
+.textboxlrg{
+  width: 75%;
+  height: 70px;
+}
