@@ -1,34 +1,32 @@
+<div class="body">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
 
-<p>
-  <strong>Time:</strong>
-  <%= @event.time %>
-</p>
+  <h1><%= @event.name %></h1>
 
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
+<div class="field show">
+  <strong>When</strong><br>
+  <%= @event.time.strftime(('%d-%m-%Y %H:%M')) %><br><br>
 
-<p>
-  <strong>Address:</strong>
-  <%= @event.address %>
-</p>
 
-<p>
+  <strong>Where</strong><br>
+<%= @event.location %><br>
+
+  <%= @event.address %><br><br>
+
+
   <strong>Closed:</strong>
-  <%= @event.closed %>
-</p>
+  <%= @event.closed %><br><br>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+
+
+  <strong>More Info</strong><br>
+
+  <%= @event.description %><br><br>
+
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
+</div>
+</div>

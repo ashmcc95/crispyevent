@@ -3,9 +3,10 @@
   <head>
     <title>Pland</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand" rel="stylesheet">
 
     <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
 <script src="https://unpkg.com/flatpickr">
@@ -15,6 +16,9 @@
   </head>
 
   <body>
+<header>
+    Pland
+  </header>
     <%= yield %>
   </body>
 </html>
