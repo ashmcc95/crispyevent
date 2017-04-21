@@ -39,7 +39,7 @@
 </div>
 
 
-</div>
+
 
 
 
@@ -50,7 +50,7 @@
       <% f.label 'Invite Friends' %>
       <h2>Invite Friends</h2>
   </div>
-
+<center>
   <div class="field">
     <%= f.fields_for :users do |users_form|%>
   <%= users_form.text_field :name, placeholder: 'Name', class: "friendfield"%>
@@ -77,26 +77,29 @@
     <%= users_form.text_field :name, placeholder: 'Name', class: "friendfield"%>
      <%= users_form.text_field :number, placeholder: 'Phone Number', class: "friendfield"%>
     <%end%>
+  </center>
+
+  <div class="containertwo">
+
+      <div class="lefttwo">
+        <%= f.check_box :closed%>
+    </div>
+    <div class="righttwo">
+      <%= f.label :closed%>
+    </div>
+  </div><br>
   </div>
 
 
 
 
+<div class="field2">
 
-<div class="containertwo">
+
+
+
+
   <div class="field">
-    <div class="lefttwo">
-      <%= f.check_box :closed%>
-  </div>
-  <div class="righttwo">
-    <%= f.label :closed%>
-  </div>
-</div><br>
-</div>
-
-
-
-  <div class="field2 field">
     <% f.label :description %>
     <%= f.text_area :description, class: 'textboxlrg', placeholder:'Description' %>
   </div>
@@ -104,7 +107,8 @@
   <div class="actions">
     <%= f.submit(class: 'button') %>
   </div>
-
+</div>
+</div>
 </div>
 <% end %>
 
