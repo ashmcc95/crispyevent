@@ -49,45 +49,29 @@
     <div class="field">
       <% f.label 'Invite Friends' %>
       <h2>Invite Friends</h2>
-  </div>
-<center>
-  <div class="field">
-    <%= f.fields_for :users do |users_form|%>
-  <%= users_form.text_field :name, placeholder: 'Name', class: "friendfield"%>
-     <%= users_form.text_field :number, placeholder: 'Phone Number', class: "friendfield"%>
-    <%end%>
+
+
   </div>
 
-  <div class="field">
-    <%= f.fields_for :users do |users_form|%>
-    <%= users_form.text_field :name, placeholder: 'Name', class: "friendfield"%>
-     <%= users_form.text_field :number, placeholder: 'Phone Number', class: "friendfield"%>
-    <%end%>
+  <center>
+
+      <%= f.fields_for :users do |users_form|%>
+        <%= render partial: 'user_fields', locals: {f: users_form} %>
+      <%end%>
+
+<div class="float">
+    <%= link_to_add_association "Add More", f, :users, id: 'new-association' %>
+</div>
+</center>
+<div class="containertwo">
+
+    <div class="lefttwo">
+      <%= f.check_box :closed%>
   </div>
-
-  <div class="field">
-    <%= f.fields_for :users do |users_form|%>
-    <%= users_form.text_field :name, placeholder: 'Name', class: "friendfield"%>
-     <%= users_form.text_field :number, placeholder: 'Phone Number', class: "friendfield"%>
-    <%end%>
+  <div class="righttwo">
+    <%= f.label :closed%>
   </div>
-
-  <div class="field">
-    <%= f.fields_for :users do |users_form|%>
-    <%= users_form.text_field :name, placeholder: 'Name', class: "friendfield"%>
-     <%= users_form.text_field :number, placeholder: 'Phone Number', class: "friendfield"%>
-    <%end%>
-  </center>
-
-  <div class="containertwo">
-
-      <div class="lefttwo">
-        <%= f.check_box :closed%>
-    </div>
-    <div class="righttwo">
-      <%= f.label :closed%>
-    </div>
-  </div><br>
+</div><br>
   </div>
 
 
@@ -113,11 +97,21 @@
 <% end %>
 
 <script type="text/javascript">
-flatpickr(".datepicker", {
-  enableTime: true,
-   dateFormat: "d/m/Y h:m",
-   minDate: "today"
+  flatpickr(".datepicker", {
+    enableTime: true,
+     dateFormat: "m/d/Y h:m",
+     minDate: "today"
 
-});
+  });
+
+
+
+
+  $(document).on('keyup', '.friendfieldnumber', function() {
+    var number_values = $('.friendfieldnumber').map(function() { return $(this).val() }).get();
+    if ($.inArray('', number_values) == -1) {
+      $('#new-association').click();
+    }
+  })
 
 </script>
